@@ -7,10 +7,10 @@ Create a heroku account by following this [link](https://signup.heroku.com/login
 You will also need a github account.
 
 # Creating & Linking your own github repository
-Git is used to perform source control. It helps teams manage code bases and merge togher their contributions.
+Git is used to perform source control. It helps teams manage code bases and merge together their contributions.
 Github is a free Git server for developers to host their git repositories.
 
-When the project is launched on gitpod, it will already be linked to a starter github repository. To link it to a new repository you need to first run the following command.
+When the project is launched on gitpod (by clicking the gitpod button above), it will already be linked to this starter github repository. To link it to a new repository you need to first run the following command.
 
 ```
 rm - rf .git
@@ -34,19 +34,6 @@ Paste and run the command in gitpod.
 
 Your workspace should now be linked to your repository
 
-# Heroku Setup
-To login to heroku open a new terminal in gitpod and enter run the following command:
-
-```
-heroku login --interactive
-```
-You will then be prompted to enter you heroku credentials. Then to create a new heroku application run the following command:
-
-```
-heroku create
-```
-The app should be created with a random name and can be seen on your [heroku dashboard](https://dashboard.heroku.com/apps/)
-
 # Pushing changes to Git
 Now the workspace is linked with a git repository it will track all the changes you make to its files.
 Run the following command to select which files will be **staged** (tracked for changes)
@@ -68,8 +55,37 @@ Finally you can send your changes to the repository by performing a **push**.
 ```
 git push -u origin master
 ```
+At this point you want to **delete** this workspace from the [gitpod dashboard](https://gitpod.io/workspaces/) so that you can create a new workspace from your new repository. 
 
-Heroku is setup to auto deploy the application for every push to the master branch the github repo. You can view the application by opening it from your [heroku dashboard](https://dashboard.heroku.com/apps/). Click on the newly created app then click on the "Open App" button.
+To create a new workspace go to your repository on github and prepend "https://gitpod.io/#" to the address in the url bar then navigate to that address.
 
-You application should now be deployed on heroku!
+![Editing Address bar](/img/url.png)
 
+Your new workspace should be created on gipod. This will allow you to use the version control UI in gitpod to push changes to github.
+
+# Heroku Setup
+Go to the [heroku dashboard](https://dashboard.heroku.com/apps) to create a new app.
+
+![New App](/img/hero-1.png)
+
+From there navigate to the deploy tab of the app.
+
+![deploy](/img/deploy.png)
+
+Then scroll down to deployment method and click github.
+
+![New App](/img/hero-2.png)
+
+Select your newly created repository and click connect.
+
+![New App](/img/hero-3.png)
+
+You can then manually deploy your repository by scrolling down and clicking deploy branch.
+
+![New App](/img/hero-5.png)
+
+You app should then be deployed
+
+![New App](/img/hero-6.png)
+
+From that point on any code pushed to the git repository will be automatically deployed to heroku.
