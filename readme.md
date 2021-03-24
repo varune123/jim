@@ -2,9 +2,8 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/uwidcit/info2602ps)](https://repl.it/github/uwidcit/info2602ps)
 
-# Before you start
-Create a heroku account by following this [link](https://signup.heroku.com/login)
-You will also need a github account.
+# Flask App Template
+You can use this app to get started with a basic flask application. If you are building out a project and need to deploy its recommeded to use the [flask mvc template](https://github.com/uwidcit/flaskmvc)
 
 # Creating & Linking your own github repository
 Git is used to perform source control. It helps teams manage code bases and merge together their contributions.
@@ -62,30 +61,3 @@ To create a new workspace go to your repository on github and prepend "https://g
 ![Editing Address bar](/img/url.png)
 
 Your new workspace should be created on gipod. This will allow you to use the version control UI in gitpod to push changes to github.
-
-# Heroku Setup
-Go to the [heroku dashboard](https://dashboard.heroku.com/apps) to create a new app.
-
-![New App](/img/hero-1.png)
-
-From there navigate to the deploy tab of the app.
-
-![deploy](/img/deploy.png)
-
-Then scroll down to deployment method and click github.
-
-![New App](/img/hero-2.png)
-
-Select your newly created repository and click connect.
-
-![New App](/img/hero-3.png)
-
-You can then manually deploy your repository by scrolling down and clicking deploy branch.
-
-![New App](/img/hero-5.png)
-
-You app should then be deployed
-
-![New App](/img/hero-6.png)
-
-From that point on any code pushed to the git repository will be automatically deployed to heroku.
