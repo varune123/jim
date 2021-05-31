@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Backend App{% endblock %}
+
+{% block header %}Index{% endblock %}
+{% block signin %}Sign in{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+    <div id="links"> <!--make links look good-->
+        <a href="">Exercise List</a>
+        <a href="">Routines</a> <!--workout routines-->
+        <a href="">Healthy Recipes</a> <!--healhy meals, diets, meal plan on calendar-->
+        <a href="">Account</a>
+    </div>
+    <div id="random"> </div> <!--show random workout on main page-->
+{% endblock %}
