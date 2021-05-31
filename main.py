@@ -54,6 +54,22 @@ def index():
 def signin():
     return render_template('signin.html')
 
+@app.route('/exercises')
+def exercises():
+    return render_template('exercises.html')
+
+@app.route('/routines')
+def routines():
+    return render_template('routines.html')
+
+@app.route('/recipes')
+def recipes():
+    return render_template('recipes.html')
+
+@app.route('/account')
+def account():
+    return render_template('account.html')
+
 @app.route('/app')
 def client_app():
   return app.send_static_file('app.html')
