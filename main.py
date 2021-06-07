@@ -6,7 +6,7 @@ from flask_jwt import JWT, jwt_required, current_identity
 from sqlalchemy.exc import IntegrityError
 from datetime import timedelta 
 
-from models import db, Logs #add application models
+from models import db, Exercise, User, SignUp, Routines, LogIn #add application models
 
 ''' Begin boilerplate code '''
 
@@ -56,7 +56,9 @@ def signin():
 
 @app.route('/exercises')
 def exercises():
-    return render_template('exercises.html')
+    exerciseList = Exercise.query.all()
+    exerciseList = [row.toDict() for row in exerciseList]
+    return render_template('exercises.html', exerciseList=exerciseList)
 
 @app.route('/routines')
 def routines():

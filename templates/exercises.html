@@ -8,4 +8,64 @@
 {{ super() }}
 
 {% block content %}
+
+<style>
+    #exerciseTable tr td{
+        border: 1px solid white;
+        color: white;
+    }
+
+    #exerciseTable thead th{
+        border: 1px solid white;
+        text-align: center;
+        color: white;
+    }
+
+    #exerciseTable th{
+        border: 1px solid white;
+        text-align: center;
+        color: white;
+        background: #484848;
+        position: sticky;
+        top: 0; /*required for the stickiness */
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+    }
+
+</style>
+
+    <table id="exerciseTable">
+        <thead>
+            <th>Exercise Name</th>
+            <th>Difficulty</th>
+            <th>Description</th>
+            <th>Equipment</th>
+            <th>Primary muscle affected</th>
+            <th>Secondary muscle affected</th>
+        </thead>
+
+        <tbody>
+            {% for row in exerciseList %}
+                        <tr>
+                            <td>{{row.name}}</td>
+                            <td>{{row.difficulty}}</td>
+                            <td>{{row.description}}</td>
+                            <td>
+                                {% if row.equipment == 'null' %}
+                                    {{"-"}}
+                                {% else %}
+                                    {{row.equipment}}
+                                {% endif %}
+                            </td>
+                            <td>{{row.primary_muscle}}</td>
+                            <td>
+                                {% if row.secondary_muscle == 'null' %}
+                                    {{"-"}}
+                                {% else %}
+                                    {{row.secondary_muscle}}
+                                {% endif %}
+                            </td>
+                        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
