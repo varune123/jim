@@ -1,18 +1,12 @@
 {% extends "layout.html" %}
 
-{% block title %}Backend App{% endblock %}
+{% block title %}OneVision{% endblock %}
 
-{% block header %}Index{% endblock %}
+{% block header %}Home{% endblock %}
 {% block signin %}Sign in{% endblock %}
 
 {{ super() }}
 
 {% block content %}
-    <div id="links"> <!--make links look good-->
-        <a href="exercises">Exercise List</a>
-        <a href="routines">Routines</a> <!--workout routines-->
-        <a href="recipes">Healthy Recipes</a> <!--healhy meals, diets, meal plan on calendar-->
-        <a href="account">Account</a>
-    </div>
     <div id="random"> </div> <!--show random workout on main page-->
 {% endblock %}
