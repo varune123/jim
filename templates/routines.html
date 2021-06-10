@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
 
-{% block title %}Sign In{% endblock %}
+<!--This page needs js
+    the goal of this page is to provide searchbar to look for routines, 
+    a form which asks user questions and certain routines are shown based 
+    on tags and form data 
+    and also default routines should be shown for advanced or basic and in different areas such as strength, endurance or speed training -->
+
+{% block title %}Routines|OneVision{% endblock %}
 
 {% block header %}Routines{% endblock %}
 {% block signin %}{% endblock %}
@@ -8,4 +14,25 @@
 {{ super() }}
 
 {% block content %}
+
+<style>
+    #routineChoices{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px 200px 200px;
+        padding: 50px;
+    }
+    .exerciseChoice{
+        height: 50px;
+    }
+</style>
+
+Choose one to select routine to follow
+<div id="routineChoices">
+    <button class="exerciseChoice" style="background-color: #334f38; color: white;">Strength</button>
+    <button class="exerciseChoice" style="background-color: #33354f; color: white;">Endurance</button>
+    <button class="exerciseChoice" style="background-color: #334f4b; color: white;">Agility</button>
+    <button class="exerciseChoice" style="background-color: #7d2222; color: white;">Flexibility</button>
+</div>
+
 {% endblock %}
