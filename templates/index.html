@@ -8,5 +8,15 @@
 {{ super() }}
 
 {% block content %}
-    <div id="random"> </div> <!--show random workout on main page-->
+<style>
+    .elements{
+        background-color: #333333;
+        color: white;
+        margin: 10px 100px 100px;
+    }
+</style>
+
+<div class="elements" id="random">Random exercises if one wishes to try them</div> <!--show random workout on main page-->
+
+<div class="elements" id="questionnaire">Take this quiz if you're unsure what you'd like to focus on</div>
 {% endblock %}
